@@ -30,7 +30,6 @@ $("html").keydown(function(e){
     }
 
     else if(e.keycode == 18){
-        console.log("BRUH")
         if (e.originalEvent.code == "AltLeft"){
             $(".Alt").css("background-color", "#574ced");
         }
@@ -77,7 +76,6 @@ $("html").keydown(function(e){
     }
 
     else{
-        console.log(htmlkey)
         $(htmlkey).css("background-color", "#574ced");
     }
 });
@@ -104,7 +102,6 @@ $("html").keyup(function(e){
     }
 
     else if(e.keyCode == 16){
-        console.log(e.originalEvent.code)
         if (e.originalEvent.code == "ShiftLeft"){
             $(".leftshift").css("background-color", "rgb(243, 243, 243)")
         }
@@ -164,18 +161,3 @@ $("html").keyup(function(e){
         $(htmlkey).css("background-color", "rgb(243, 243, 243)");
     }
 });
-
-// $("html").keydown(function(e){
-//     let key = String.fromCharCode(event.which).toUpperCase();
-//     console.log(key.keyCode);
-
-//     if(e.keyCode == 8){
-//     }
-//     if(e.keyCode == 32){
-//         // user has pressed space
-//         $(".space").css("background-color", "#574ced");
-//     }
-
-//     console.log(key);
-//     let htmlkey = ".key"+key;
-// });
