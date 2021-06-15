@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #074470;
+    color: white;
+    position: relative;
+}
+
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.title-container {
+    font-family: 'Anonymous Pro', monospace; 
+}
+
+#title{
+    margin: 1em;
+    font-size: 10vh;
+}
+
+#subtitle{
+    font-size: 4vh;
+}
+
+.keyboard-div{
+    padding: 0 0 5vh 0;
+    background-color: #042238;
+}
+
+.keyboard-base {
+    max-width: 67em;
+    padding: 1em;
+    /* margin: 15em 0 0 2em; */
+    position: relative;
+    top: 12em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(30, 30px);
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 5px;
+}
+
+
+.key {
+    background-color: rgb(243, 243, 243);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    grid-column: span 2;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* .key:hover {
+  border: 1px solid #eeeeee;
+  
+} */
+
+.delete {
+    grid-column: span 4;
+}
+
+.tab {
+    grid-column: span 3;
+}
+
+.backslash {
+    grid-column: span 3;
+}
+
+.capslock {
+    grid-column: span 4;
+}
+
+.return {
+    grid-column: span 4;
+}
+
+.leftshift {
+    grid-column: span 5;
+}
+
+.rightshift {
+    grid-column: span 5;
+}
+
+.leftctrl {
+    grid-column: span 3;
+}
+
+.command {
+    grid-column: span 3;
+    font-size: 14px;
+}
+
+.space {
+    grid-column: span 13;
+}
+
+.words-container{
+    position: relative;
+    background-color: #042238;
+    letter-spacing: 3px;
+    margin-top: 20vh;
+    font-size: 5vh;
+    height: 40vh;
+}
+
+.words{
+    position: relative;
+    top: 10vh;
+    background-color: #042238;
+}
+
+@keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+}
