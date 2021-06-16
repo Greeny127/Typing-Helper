@@ -39,29 +39,28 @@ body {
 }
 
 .keyboard-base {
-    max-width: 67em;
-    padding: 1em;
-    /* margin: 15em 0 0 2em; */
+    max-width: 150vh;
+    padding: 2vh;
     position: relative;
-    top: 12em;
+    top: 30vh;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(197, 197, 197);
-    border-radius: 10px;
+    border-radius: 3vh;
     display: grid;
-    grid-template-columns: repeat(30, 30px);
-    grid-template-rows: repeat(5, 60px);
-    grid-gap: 5px;
+    grid-template-columns: repeat(30, 4vh);
+    grid-template-rows: repeat(5, 9vh);
+    grid-gap: 1vh;
 }
 
 
 .key {
     background-color: rgb(243, 243, 243);
     color: black;
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 0.2vh solid black;
+    border-radius: 1vh;
     grid-column: span 2;
-    font-size: 1.5em;
+    font-size: 3.5vh;
     text-align: center;
 }
 
@@ -104,7 +103,7 @@ body {
 
 .command {
     grid-column: span 3;
-    font-size: 14px;
+    font-size: 2.2vh;
 }
 
 .space {
@@ -189,7 +188,8 @@ input:checked + .slider:before {
 
 .options {
     background-color: #042238;
-    /* display: flex; */
+    text-align: left;
+    padding-left: 1em;
 }
 
 .azerty-option{
@@ -197,7 +197,9 @@ input:checked + .slider:before {
 }
 
 .options h2{
+    text-align: left;
     background-color: #042238;
+    padding: 0 0 1em 0;
 }
 @keyframes caret {
     50% {
