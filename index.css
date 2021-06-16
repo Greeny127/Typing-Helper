@@ -201,6 +201,7 @@ input:checked + .slider:before {
     background-color: #042238;
     padding: 0 0 1em 0;
 }
+
 @keyframes caret {
     50% {
       border-color: transparent;
