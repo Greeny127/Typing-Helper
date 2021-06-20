@@ -8,7 +8,7 @@ $.get("https://random-word-api.herokuapp.com/word?number=10000", function(data){
             smallwords = words.substring(0+count, 50+count);
             console.log(count)
             count = count + 1;
-            $('.words').text(smallwords);    
+            $('.words').text(smallwords);
         }
     });
     

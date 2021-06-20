@@ -8,6 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>Typing Helper</title>
         <script src="scripts/disablekeys.js"></script>
+        <script defer src="scripts/options_modal.js"></script>
     </head>
 
     <body>
@@ -25,31 +26,46 @@
             <script src="scripts/letters.js"></script>
         </div>
 
-        <div class="options">
-            <!-- <div class="qwerty-option options">
-                <label class="switch">
-                    <input class="querty layout" type="radio" name="layouts" value="1" checked>
-                    <span class="slider round"></span>
-                </label>
+        <div class="modal active" id="modal">
+            <div class="modal-header">
+                <div class="modal-title">
+                    Settings
+                </div>
 
-                <h2>QWERTY Layout</h2>
+                <button data-close-button class="close-button">&times;</button>
             </div>
 
-            <div class="azerty-option options">
-                <label class="switch">
-                    <input class="azerty layout" type="radio" name="layouts" value="2">
-                    <span class="slider round"></span>
-                </label>
+            <div class="modal-body">
+                <div class="qwerty-option options">
+                    <label class="switch">
+                        <input class="querty layout" type="radio" name="layouts" value="1" checked>
+                        <span class="slider round"></span>
+                    </label>
+    
+                    <h2>QWERTY Layout</h2>
+                </div>
+    
+                <div class="azerty-option options">
+                    <label class="switch">
+                        <input class="azerty layout" type="radio" name="layouts" value="2">
+                        <span class="slider round"></span>
+                    </label>
+    
+                    <h2>AZERTY Layout</h2>
+                </div>
 
-                <h2>AZERTY Layout</h2>
-            </div> -->
+                <script src="scripts/options.js"></script>
+            </div>
+        </div> 
 
-            <script src="scripts/options.js"></script>
+        <div id="modal-overlay">
         </div>
 
         <!--======================================================     Keyboard class, UGLY DO NOT LOOK   ======================================================================= -->
 
         <div class="keyboard-div">
+            <button data-modal-target="#modal" class="options-button">Settings</button>
+
             <div class="keyboard-base">
                 <div class="key key~">~</div>
                 <div class="key key1">1</div>
