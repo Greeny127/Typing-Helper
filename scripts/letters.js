@@ -1,31 +1,16 @@
-function letters(length, characters) {
-    let result = '';
-    let charactersLength = characters.length;
+$.get("https://random-word-api.herokuapp.com/word?number=10000", function(data){
+    var words = data.toString().replace(/,/g, " ");
+    var smallwords = words.substring(0, 50);
+    var count = 0;
 
-    for ( var i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-   
-    return result;
-}
-
-function divWords(letters, len, wordlimit){
-    let words = [];
-    let charactersLength = letters.length;
-
-    for (var j = 0; j < wordlimit; j++){
-        result = "";
-        for ( var i = 0; i < len; i++ ) {
-            result += letters.charAt(Math.floor(Math.random() * charactersLength));
+    $('html').bind('keypress', function(e) {
+        if (String.fromCharCode(e.keyCode) === smallwords.charAt(0)){
+            smallwords = words.substring(0+count, 50+count);
+            console.log(count)
+            count = count + 1;
+            $('.words').text(smallwords);    
         }
-
-        words.push(result);
-    }
-
-    return words;
-}
-
-var characters = letters(16000, "fjkd")
-var words = divWords(characters, 4, 10)
-
-console.log(words)
+    });
+    
+    $('.words').text(smallwords); 
+});   

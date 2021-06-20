@@ -1,5 +1,5 @@
 $("html").keydown(function(e){
-    let key = String.fromCharCode(event.which).toUpperCase();
+    let key = String.fromCharCode(e.keyCode).toUpperCase();
     let htmlkey = ".key"+key;
 
     if(e.keyCode == 8){
